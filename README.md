@@ -1,9 +1,14 @@
 # GraduationProject_AES_Implementation_on_DE1_SoC_using_FPGA_and_HPS
+Trong dự án này nhóm hai thành viên chúng tôi sử dụng bo mạch phát triển DE1-SoC, đầu tiên tôi muốn nói sơ qua quá trình từ lúc bắt đầu cho đến khi đạt được kết quả cuối cùng:
+- Đầu tiên, tôi đưa ra lựa chọn là dùng UART làm giao thức truyền nhận dữ liệu cho module AES, vì khi mới bắt đầu dự án chúng tôi không có quá nhiều kinh phí đầu tư cho phần cứng nên chúng tôi dự định toàn bộ hệ thống sẽ được thiết kế trên FPGA.
+- Sau khi hoàn tất đăng ký đề tài thì nhóm mới có cơ hội được tiếp cận với DE1-SoC một bo mạch phát triển được Terasic thiết kế cho chương trình dạy học. Tuy nhiên vì đã đăng ký và không thay đổi tên đề tài được nên hệ thống dùng UART chúng tôi vẫn phải hoàn thành, sau khi viết module giao thức UART và thực hiện truyền nhận dữ liệu thực tế trên kit thành công thì tôi cũng có tham khảo thêm ý kiến của thầy hướng dẫn và tôi quyết định phát triển dự án này cả trong lúc đang thực hiện. Lúc này thời gian chỉ còn khoảng 1 tháng rưỡi trước ngày bảo vệ, tôi quyết định chuyển sang sử dụng Ethernet (socket TCP/IP) chạy trên HPS để truyền nhận dữ liệu. Qúa trình thiết kế và kết quả được trình bày như các phần bên dưới:
 
-<img width="570" height="461" alt="image" src="https://github.com/user-attachments/assets/27e5fe10-03a7-43ab-8488-2f09d7d235db" />
+Bộ công cụ phát triển DE1-SoC là một nền tảng thiết kế phần cứng mạnh mẽ được xây dựng xung quanh FPGA-SoC của Altera, kết hợp lõi nhúng Cortex-A9 mới nhất với logic lập trình hàng đầu trong ngành, mang lại sự linh hoạt tối ưu trong thiết kế
+<img width="460" height="570" alt="image" src="https://github.com/user-attachments/assets/27e5fe10-03a7-43ab-8488-2f09d7d235db" />
 
 <img width="570" height="461" alt="image" src="https://github.com/user-attachments/assets/7599be84-4121-4fbb-a817-3a9fda7aadc3" />
 
+Hệ thống cơ bản bao gồm một giao diện thao tác trên máy tính được xây dựng dựa trên thư viện QtPy5, giao tiếp với DE1-SoC thông qua Ethernet bằng socket TCP/IP cho phép truyền nhận dữ liệu tốc độ cao. Người dùng trực tiếp thao tác trên giao diện này, chọn tải hình ảnh cần mã hóa/giải mã lên từ thư mục của máy tính hoặc chụp ảnh từ Camera.
 <img width="1379" height="372" alt="image (6)" src="https://github.com/user-attachments/assets/422417f6-75c4-4bcc-8124-d370013d7cb8" />
 
 Dự án thực hiện trên bo mạch phát triển DE1-SoC, đặt mục tiêu xây dựng một hệ thống
