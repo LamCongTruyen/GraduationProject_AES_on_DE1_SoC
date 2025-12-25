@@ -17,7 +17,7 @@ Sơ đồ khối hệ thống gồm:
 <img width="700" height="444" alt="image" src="https://github.com/user-attachments/assets/6151ffd2-ebcb-46f2-a6d8-6de926f2fdbd" />
 
 
-#Cấu hình Platform Designer (trước đây là Qsys):
+# Cấu hình Platform Designer (trước đây là Qsys):
 <img width="1916" height="1050" alt="image" src="https://github.com/user-attachments/assets/40997467-6cdd-478d-8a0d-df1efd86243d" />
 
 Bằng việc tham khảo các Golden Hardware Reference Design trong thư mục hướng dẫn cho người mới bắt đầu của Terasic, cũng như đọc qua các báo cáo của dự án ECE5760 của Đại học Cornell. Từ đó học cách sử dụng cách giao tiếp giữa HPS và FGPA, mặc dù có các cách cho tốc độ cao hơn như là: DMA, dual FIFO nhưng các cách này yêu cầu độ khó cao cũng như cần hiểu biết sâu hơn. Thời gian thực hiện không còn nhiều nên tôi quyết định chọn cách đó là gửi dữ liệu từ HPS đến FPGA bằng FIFO và đọc ngược lại bằng vùng nhớ có thể nhìn chung Onchip Memory.
@@ -58,14 +58,20 @@ Dạng sóng ghi lại quá trình mã hóa và ghi dữ liệu vào On-chip Mem
 Dạng sóng ghi lại quá trình giải mã ngược và ghi dữ liệu vào On-chip Memory:
 <img width="945" height="172" alt="image" src="https://github.com/user-attachments/assets/392e7e44-e0af-4aa7-b793-7b9b20f107d7" />
 
-#Triển khai trên FPGA
+# Triển khai trên FPGA
 Kết quả tổng hợp hệ thống HPS-FPGA trên Cyclone V 5CSEMAF31C6
+
 <img width="598" height="342" alt="image" src="https://github.com/user-attachments/assets/6cd99c77-236c-46a5-93a3-85d4d5492998" />
 
 Kết quả tổng hợp khi sử dụng giao thức UART:
+
 <img width="491" height="352" alt="image" src="https://github.com/user-attachments/assets/9b95d5fb-5b5e-4c97-b983-e2955912c41a" />
 
 So sánh hai kết quả, có thể thấy được tốc độ toàn bộ hệ thống khi sử dụng thêm HPS giao tiếp ngoại vi nhanh hơn khi sử dụng mỗi UART với cấu hình 8N1 (8bit data, no parity, 1 stopbit) ở tốc độ Baud 115200 (khoảng 0.011MB/s) như trước đó nhóm thực hiện khoảng 400 lần. Mức sử dụng các khối logic cũng giảm từ 22000 xuống chỉ còn gần 8000.
+
+# Trạng thái và kết quả xử lý được hiển thị trên Terminal trong quá trình chương trình hoạt động:
+
+<img width="752" height="884" alt="image" src="https://github.com/user-attachments/assets/2c0ce9ae-7f26-4c85-88db-6fb5301be965" />
 
 https://ftp.intel.com/Public/Pub/fpgaup/pub/Intel_Material/18.1/Computer_Systems/DE1-SoC/DE1-SoC_Computer_NiosII.pdf
 
