@@ -94,3 +94,8 @@ Ngược lại với hệ thống HPS-FPGA dùng Ethernet (socket TCP/IP), kết
 https://docs.google.com/document/d/1xVUMK3fAIc5wAczC5PWcu856gjt7scLw/edit?usp=sharing&ouid=109821258768301239272&rtpof=true&sd=true
 # Slide thuyết trình:
 https://drive.google.com/file/d/1ngxJcHEp_deetAN-4ZRwzoEtzyoNM3FQ/view?usp=sharing
+
+# XIN TRÂN TRỌNG CẢM ƠN
+
+<img width="2048" height="1536" alt="c73f9e12-696f-4d17-9d3c-10ecbd3b3664 - Copy" src="https://github.com/user-attachments/assets/d40ed38d-05f8-43f2-b4d9-a095ffce5d4d" />
+
