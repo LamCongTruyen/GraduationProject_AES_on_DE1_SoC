@@ -85,6 +85,8 @@ Giao diện PyQt5 thực hiện quy trình với dữ liệu từ ESPCam
 # Giao diện winform giao tiếp UART với module AES
 <img width="935" height="525" alt="image" src="https://github.com/user-attachments/assets/c1e14dde-6c6c-4caf-9183-56d2b03dff9e" />
 
+Ngược lại với hệ thống HPS-FPGA dùng Ethernet (socket TCP/IP), kết quả của việc sử dụng UART làm giao thức truyền nhận được hiển thị như hình trên. Mặc dù kết quả chính xác, tuy nhiên giao diện sử dụng phức tạp, nhóm phải giảm kích thước của hình ảnh cũng như thay đổi thành định dạng Grayscale để giảm dung lượng của ảnh cần mã hóa, điều này khiến cho tính ứng dụng và độ tin cậy của hệ thống mã hóa giảm xuống khá nhiều nếu như hình ảnh cần độ chính xác cao dùng cho phân tích ảnh và giám sát. Trong trường hợp không xử lý như vậy thì UART có thể bị treo, bị nghẽn làm ảnh hưởng đến hoạt động của toàn bộ hệ thống, đó là nguyên nhân then chốt mà nhóm quyết định không sử dụng cách này mà chuyển sang nghiên cứu sử dụng HPS sau khi tham khảo ý kiến Giảng viên hướng dẫn.
+
 # Triển khai thực tế trên DE1-SoC
 <img width="926" height="521" alt="image" src="https://github.com/user-attachments/assets/644e4eea-b73a-408d-b05f-684466566c9e" />
 
