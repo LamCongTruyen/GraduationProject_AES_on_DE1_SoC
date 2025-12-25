@@ -10,7 +10,6 @@ Bộ công cụ phát triển DE1-SoC là một nền tảng thiết kế phần
 
 Hệ thống cơ bản bao gồm một giao diện thao tác trên máy tính được xây dựng dựa trên thư viện QtPy5, giao tiếp với DE1-SoC thông qua Ethernet bằng socket TCP/IP cho phép truyền nhận dữ liệu tốc độ cao. Người dùng trực tiếp thao tác trên giao diện này, chọn tải hình ảnh cần mã hóa/giải mã lên từ thư mục của máy tính hoặc chụp ảnh từ Camera.
 <img width="1379" height="372" alt="image (6)" src="https://github.com/user-attachments/assets/422417f6-75c4-4bcc-8124-d370013d7cb8" />
-
 Sơ đồ khối hệ thống gồm: 
 - Hard Processor System (HPS): Dual-core ARM Cortex-A9 MPCore có tốc độ lên đến ~800MHz chạy hệ điều hành Linux được boot từ thẻ SD. Kết nối với các ngoại vi như Gigabit Ethernet, USB to UART.
 - FPGA: gồm 2 IP chính được hỗ trợ bởi công cụ Platform Designer: On-chip Memory, FIFO Avalon Memory Mapped và module AES được chúng tôi thiết kế.
@@ -24,7 +23,7 @@ Cấu hình Platform Designer (trước đây là Qsys):
 Bằng việc tham khảo các Golden Hardware Reference Design trong thư mục hướng dẫn cho người mới bắt đầu của Terasic, cũng như đọc qua các báo cáo của khóa hoc ECE576 của Đại học Cornell. Từ đó học cách sử dụng cách giao tiếp giữa HPS và FGPA, mặc dù có các cách cho tốc độ cao hơn như là: DMA, dual FIFO nhưng các cách này yêu cầu độ khó cao cũng như cần hiểu biết sâu hơn. Thời gian thực hiện không còn nhiều nên tôi quyết định chọn cách đó là gửi dữ liệu từ HPS đến FPGA bằng FIFO và đọc ngược lại bằng vùng nhớ có thể nhìn chung Onchip Memory.
 
 Luồng thiết kế khi sử dụng công cụ Platform Designer:
-<img width="922" height="700" alt="image (8)" src="https://github.com/user-attachments/assets/94e58f41-e0f8-4f97-834c-ce51c34242bd" />
+<img width="700" height="500" alt="image (8)" src="https://github.com/user-attachments/assets/94e58f41-e0f8-4f97-834c-ce51c34242bd" />
 Lưu đồ giải thuật chương trình C thực hiện giao tiếp giữa HPS và FPGA, các ô màu xanh dương là các lệnh thực thi trên HPS còn các ô màu xanh lục là các lệnh thực thi trên FPGA:
 <img width="909" height="909" alt="image (7)" src="https://github.com/user-attachments/assets/daa717a3-a311-46cc-96eb-4e9709357a34" />
 
