@@ -3,6 +3,9 @@ Trong dự án này nhóm hai thành viên chúng tôi sử dụng bo mạch ph�
 - Đầu tiên, tôi đưa ra lựa chọn là dùng UART làm giao thức truyền nhận dữ liệu cho module AES, vì khi mới bắt đầu dự án chúng tôi không có quá nhiều kinh phí đầu tư cho phần cứng nên chúng tôi dự định toàn bộ hệ thống sẽ được thiết kế trên FPGA.
 - Sau khi hoàn tất đăng ký đề tài thì nhóm mới có cơ hội được tiếp cận với DE1-SoC một bo mạch phát triển được Terasic thiết kế cho chương trình dạy học. Tuy nhiên vì đã đăng ký và không thay đổi tên đề tài được nên hệ thống dùng UART chúng tôi vẫn phải hoàn thành, sau khi viết module giao thức UART và thực hiện truyền nhận dữ liệu thực tế trên kit thành công thì tôi cũng có tham khảo thêm ý kiến của thầy hướng dẫn và tôi quyết định phát triển dự án này cả trong lúc đang thực hiện. Lúc này thời gian chỉ còn khoảng 1 tháng rưỡi trước ngày bảo vệ, tôi quyết định chuyển sang sử dụng Ethernet (socket TCP/IP) chạy trên HPS để truyền nhận dữ liệu. Qúa trình thiết kế và kết quả được trình bày như các phần bên dưới.
 
+# Mục tiêu
+Dự án đặt trọng tâm vào việc thiết kế thuật toán AES bằng ngôn ngữ Verilog, xây dựng giao diện sử dụng trên FPGA mà cụ thể là DE1-SoC, học cách xác minh thiết kế bằng Testbench Simulation, công cụ Signal Tap II Logic Analysis, phân tích báo cáo từ công cụ Timing Analysis. Từ đó đưa ra các đánh giá và sửa lỗi để cải thiện thiết kế mà mục tiêu chính là đạt được sự hài lòng về Performance và Area, đảm bảo vận dụng quy trình thiết kế vi mạch đúng cách
+
 Bộ công cụ phát triển DE1-SoC là một nền tảng thiết kế phần cứng mạnh mẽ được xây dựng xung quanh FPGA-SoC của Altera, kết hợp lõi nhúng Cortex-A9 mới nhất với logic lập trình hàng đầu trong ngành, mang lại sự linh hoạt tối ưu trong thiết kế
 <img width="460" height="570" alt="image" src="https://github.com/user-attachments/assets/27e5fe10-03a7-43ab-8488-2f09d7d235db" />
 
@@ -94,8 +97,11 @@ Ngược lại với hệ thống HPS-FPGA dùng Ethernet (socket TCP/IP), kết
 https://docs.google.com/document/d/1xVUMK3fAIc5wAczC5PWcu856gjt7scLw/edit?usp=sharing&ouid=109821258768301239272&rtpof=true&sd=true
 # Slide thuyết trình:
 https://drive.google.com/file/d/1ngxJcHEp_deetAN-4ZRwzoEtzyoNM3FQ/view?usp=sharing
+# Video demo hệ thống
+https://youtu.be/U1j70yaQe4M
+# Video cho điểm hội đồng 3
+https://www.youtube.com/watch?v=PYMLmPdxt6Y
 
 # XIN TRÂN TRỌNG CẢM ƠN
-
 <img width="2048" height="1536" alt="c73f9e12-696f-4d17-9d3c-10ecbd3b3664 - Copy" src="https://github.com/user-attachments/assets/d40ed38d-05f8-43f2-b4d9-a095ffce5d4d" />
 
