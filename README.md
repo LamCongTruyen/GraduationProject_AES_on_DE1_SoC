@@ -31,7 +31,7 @@ Luồng thiết kế khi sử dụng công cụ Platform Designer:
 Lưu đồ giải thuật chương trình C thực hiện giao tiếp giữa HPS và FPGA, các ô màu xanh dương là các lệnh thực thi trên HPS còn các ô màu xanh lục là các lệnh thực thi trên FPGA:
 <img width="909" height="909" alt="image (7)" src="https://github.com/user-attachments/assets/fbceba74-1045-4a61-a28f-94f07499bc4a" />
 
-Dạng sóng testbench topmodule thiết kế sử dụng UART truyền nhận dữ liệu cho module AES:
+Dạng sóng testbench topmodule thiết kế sử dụng UART truyền nhận dữ liệu cho module AES, được nhóm thực hiện xác minh đầy đủ các module thiết kế trước khi phát triển sang sử dụng phần HPS:
 <img width="1846" height="584" alt="image (5)" src="https://github.com/user-attachments/assets/1601bd26-1e68-43aa-aa4b-b27f8f1f2b79" />
 
 Phóng to dạng sóng thời điểm AES xử lý:
